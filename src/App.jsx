@@ -1,14 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Form from "./components/Form";
-import Header from "./components/Header";
+import Home from "./pages/Home";
+import Historial from "./pages/Historial";
 
 function App() {
   return (
     <>
-      <Header />
-      <Form />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Historial />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  );
+  )
 }
 
 export default App;
