@@ -120,8 +120,8 @@ export default function Form() {
       );
     } else if (metroCuadrado < 20 || metroCuadrado > 500) {
       return alerta(
-        "Falta información",
-        "Por favor, complete los datos que faltan."
+        "Corroborar la información",
+        "Por favor, ingrese un valor entre 20 y 500"
       );
     } else {
       confirmarCotizacion();
