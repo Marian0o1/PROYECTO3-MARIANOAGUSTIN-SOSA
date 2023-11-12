@@ -8,7 +8,7 @@ export default function Header() {
             <span title="Ver Historial" id="botonEmoji">📋</span>
           </Link>
         </div>
-        <h1 className="center separador">Seguros del hogar 🏡</h1>
+        <h1 className="center separador">Pólizas para el hogar 🏡</h1>
       </nav>
     );
 }
