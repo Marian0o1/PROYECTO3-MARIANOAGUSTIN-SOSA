@@ -68,12 +68,12 @@ export default function Form() {
         cancelButtonColor: "#d33",
         confirmButtonText: "Sí, cotizar",
       });
-  
+
       if (result.isConfirmed) {
         // Lógica de cotización
         const currentDateTime = getCurrentDateTime();
         setFechaCotizacion(currentDateTime);
-  
+
         const seleccionarPropiedad = propiedad.find(
           (item) =>
             item.factor === parseFloat(propiedadSelec) &&
@@ -84,11 +84,11 @@ export default function Form() {
             item.factor === parseFloat(ubicacionSelec) &&
             item.categoria === "ubicacion"
         );
-  
+
         // Calculo de poliza mensual:
         const calcularPoliza =
           costoM2 * metroCuadrado * propiedadSelec * ubicacionSelec;
-  
+
         // Guardamos los datos en el historial:
         const updatedResultado = [
           ...resultado,
@@ -103,16 +103,16 @@ export default function Form() {
             calcPoliza: calcularPoliza.toFixed(2),
           },
         ];
-  
+
         // Actualizamos el estado
         setResultado(updatedResultado);
-  
+
         // Guardamos en localStorage
         saveToLocalStorage(updatedResultado, "dataPoliza");
         alerta("", "Cotización guardada con éxito.", "success");
       }
     };
-  
+
     if (metroCuadrado === "" || !propiedadSelec || !ubicacionSelec) {
       return alerta(
         "Falta información",

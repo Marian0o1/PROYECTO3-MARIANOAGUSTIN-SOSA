@@ -39,7 +39,7 @@ export default function Historial() {
 
   return (
     <div>
-      <h1 className="center separador">Ver Historial 📋</h1>
+      <h1 className="center separador">Tus cotizaciones 😊</h1>
       <div className=" center div-cotizador">
         <table>
           <thead>
